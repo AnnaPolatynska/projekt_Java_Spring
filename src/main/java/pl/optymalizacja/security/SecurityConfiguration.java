@@ -9,6 +9,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 	@Override
 	protected void configure(HttpSecurity http) throws Exception{
 		http.authorizeRequests()
+	//nieuwierzytelnione dla poniższych
 		.antMatchers("/").permitAll()
 		.antMatchers("/about").permitAll()
 		.antMatchers("/success").permitAll()
@@ -18,7 +19,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 		.antMatchers("/articles").permitAll()
 		.antMatchers("/ankieta").permitAll()
 		.antMatchers("/add").permitAll()
-		.antMatchers("/contakt").permitAll()
+		//uwierzytelnianie dla każdego innego adresu
 		.anyRequest().authenticated()
 	.and()
 		.formLogin()

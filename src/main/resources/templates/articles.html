@@ -13,7 +13,7 @@
     </div>
     <nav>
       <ul>
-       <li><a href="/home">Home</a></li>
+       <li><a href="/">Home</a></li>
         <li><a href="/about">o mnie</a></li>
         <li><a href="/registerForm">Rejestracja</a></li>
         <li><a href="/loginForm">Logowanie</a></li>
@@ -24,10 +24,6 @@
       </ul>
      </nav>
   </header>
-  <p>wylogowywanie </p>
-	<form th:action="@{/logout}" method= "post">
-		<input type= "submit" value= "logout"/>
-	</form>
 </div>
 <!-- content -->
 <div class="wrapper row2">
@@ -81,37 +77,6 @@
     <!-- / content body -->
   </div>
    
-</div>
-<!-- footer -->
-<div class="wrapper row3">
-  <footer id="footer" class="clear">
-    <section id="shout">
-      <h1> Our posts </h1>
-    </section>
-    <!-- main content -->
-    <section id="services" class="clear">
-      <!-- article 1 -->
-      <article>
-        <h2> Posts list </h2>
-		<div th:unless="${all.isEmpty()}">
-			<div th:each="singlePost: ${all}" th:object="${singlePost}">
-				<h3> Title </h3>
-				<h3 th:text="*{title.toUpperCase()}"> title </h3>
-				<h4> Content </h4>
-				<h4 th:text="*{content}"> content </h4>
-				<h4> Author </h4>
-				<h4 th:text="*{sign}"> email </h4><br/>
-			</div>
-		</div>
-		<div th:if="${all.isEmpty()}">
-			<h3> There is no post yet </h3>
-		</div>
-        <!-- <footer class="more"><a href="#">Read More &raquo;</a></footer> -->
-      </article>
-    </section>
-    
-    <p class="fl_right"></p>
-  </footer>
 </div>
 </body>
 </html>

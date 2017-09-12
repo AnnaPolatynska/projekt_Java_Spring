@@ -35,10 +35,10 @@
     <section id="services" class="clear">
       <!-- article 1 -->
       <article>
-              <p>Zaloguj się aby skorzystać z dodatkowych zasobów.</p>
-        <form th:action="@{/contact}" method="post" th:object="${reg_rep}">
+              <p>Zaloguj się aby zostawić posta.</p>
+        <form th:action="@{/articles}" method="post" th:object="${reg}">
 			<p> Insert login </p>
-			<input type="email" th:field="*{login}" /> <br/>
+			<input type="email" th:field="*{login}"/> <br/>
 			<p> Insert password </p>
 			<input type="password" th:field="*{password}"/> <br/>
 			<input type="submit" value="login"/>
