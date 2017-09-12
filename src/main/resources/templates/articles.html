@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Basic 79</title>
+<meta charset="iso-8859-1" />
+<link rel="stylesheet" href="css/layout.css" type="text/css" />
+</head>
+<body>
+<div class="wrapper row1">
+  <header id="header" class="clear">
+    <div id="hgroup">
+      <h1><a href="#">Optymalizacja.pl</a></h1>
+    </div>
+    <nav>
+      <ul>
+       <li><a href="/home">Home</a></li>
+        <li><a href="/about">o mnie</a></li>
+        <li><a href="/registerForm">Rejestracja</a></li>
+        <li><a href="/loginForm">Logowanie</a></li>
+        <li><a href="#">o optymalizacji</a></li>
+        <li><a href="/contact">Kontakt</a></li>
+        <li><a href="/ankieta">ankieta</a></li>
+      
+      </ul>
+     </nav>
+  </header>
+  <p>wylogowywanie </p>
+	<form th:action="@{/logout}" method= "post">
+		<input type= "submit" value= "logout"/>
+	</form>
+</div>
+<!-- content -->
+<div class="wrapper row2">
+  <div id="container" class="clear">
+    <!-- content body -->
+    <section id="shout">
+      <h1>Witajcie na moim blogu</h1>
+    </section>
+    <!-- main content -->
+    <section id="services" class="clear">
+      <!-- article 1 -->
+      <article>
+      <h1>Optymalizacja</h1>
+      	<p>Świat pędzi coraz szybciej przez co i my musimy nadążyć. Praca, dom, rachunki, wieczne sprawy do załatwienia - istny zawrót głowy. Czy też masz czasem wrażenie że świat oszalał?</p>
+		<p>Mamy XXI wiek i całą masę udogodnień: samochody, telefony, internet, rozmaite aplikacje i urządzenia mające nam ułatwić życie, a mimo to mamy mniej czasu niż nasze babcie. Nie musimy już chodzić do sklepów (bo mamy sklepy internetowe), odkurzać (bo mamy roboty odkurzające), prać ręcznie (bo mamy pralki z programami do wszelkich ubrań, również delikatnych), nie musimy chodzić do bibliotek (bo wystarczy kilka kliknięć w internecie, aby mieć dostęp do kopii książek online), o nowoczesnych samochodach nawet nie wspomnę (gdyż chyba już myślą za nas, bo tak daleko poszły funkcje wspomgania nas przez komputery pokładowe), a mimo to nadal narzekamy na pernamentny brak czasu.</p>
+		<p>Dlaczego w takim razie nie spełniły się piękne scenariusze z filmów science fiction? Dlaczego te wszystkie ułatwienia nie dają nam odczuwalnie więcej czasu?</p>
+		<p>Jak to możliwe, że moja babcia była w stanie, z dostępnych produktów, zaplanować posiłek i codziennie przygotować go dla sześciu osób na konkretną godzinę, a ja pomimo pełnej lodówki jakoś nie mam do tego głowy i najczęściej wybieram szybki posiłek na mieście.</p>
+		<p>Jak to jest, że moja babcia miała zawsze w co się ubrać i zawsze wyglądała elegancko, pomimo mniejszej szafy, a ubrania, pomimo niższych zarobków i zmian sylwetki, zawsze leżały ideanie, a ja tonę w ubraniach i jakoś ciągle nie mam się w co ubrać.</p>
+		<p>Dlaczego kiedyś ludzie mieli czas, aby spokojnie porozmawiać z sąsiadem, a dziś stać nas tylko na szybką wymianę sms-ów lub co najwyżej kilka słów na chacie.</p>
+		<div></div>
+		<p>Tak wiem, zaraz podniosą się głosy, że kiedyś kobiety siedziały w domu i miały czas na wszystko, i że dzisiejsze ubrania to już nie ta jakość. Ale czy na pewno?</p>
+		<p>A może jesteśmy gorzej zorganizowani?</p>
+		<p>Czy zastanawialiście się dlaczego tak się dzieje?</p>
+		<p>Dlaczego, pomimo iż powinniśmy mieć więcej czasu niż nasi dziadkowie, ciągle nam go jakoś brakuje, a wszelkie udogodnienia techniczne niewiele pomagają?</p>
+		<p>Wydaje mi się, że nie do końca problem wynika tylko ze złej organizacji. Sądzę, że zapanowała istna moda na bycie ciągłe zajętym i doszła cała masa "przeskadzaczy".</p>
+		<p>W pracy szefowa nie sprecyzuje jak ma wyglądać zestawienie, więc zamiast jednego robisz trzy. Do tego dochodzi konieczność ciągłego sprawdzania wszystkiego ze wszystkim (wiadomo procedury), w efekcie czuję się jakbym biegała z pustymi taczkami, a efektów jakoś nie widać. Dodatkowo sami wynajdujemy sobie setki dodatkowych zadań, które bardzo kradną czas jak np. codzienne oglądanie TV, granie w gry, życie na facebooku, ciągłe sprawdzanie poczty elektronicznej.</p>
+		<div></div>
+		<p>Jak wytrzymać życie na karuzeli i nie dostać zawrotów głowy?</p>
+		<p>Czy jesteśmy w stanie spełnić swoje obowiązki i nie zwariować. A może bez uszczerbku dla codziennyh obowiązkow, udałoby się wygospodarować nieco wolnego czasu i np. gdzieś wyjechać?</p>
+		<p>Kuszące?</p>
+		<p>Z pewnością warte zachodu. Tylko jak tego dokonać?</p>
+		<div></div>
+		<p>Z pomocą przychodzi nam OPYMALIZACJA</p>
+		<div></div>
+		<a href= "https://pl.wikipedia.org/wiki/Optymalizacja">Optymalizacja wg. wikipedii</a>
+		<div></div>
+		<p>Skoro optymalizacja to metoda wyznaczania najlepszego (optymalnego) rozwiązania i ma zastosowanie do takich dziedzin jak m.in.:</p>
+	<ul>
+        <li>projektowanie produktu i procesu produkcji,</li>
+        <li>finansach,</li>
+        <li>zarządzaniu ludzmi,</li>
+        <li>programowanie komputerowym,</li>
+        <li>innych diedzinach życia</li>
+    </ul>
+		<p>to dlaczego nie zastosować jej we własnym życiu?</p> 
+      	<p>Co powiecie na próbę optymalizacji życia? Na lepsze wykorzystanie tych zasobów, które mamy do dyspozycji? A może uda się odnaleźć i lepiej wykorzystać czas, którgo powinno być więcej, dzięki nowym technologiom i wynalazkom, a który nam się gdzieś zgubił?</p>
+      	<p>Jeżeli uważacie temat za ciekawy zapraszam do kolejnych wpisów, podejmijmy razem to wyzwanie!</p>
+        <!-- <footer class="more"><a href="#">Read More &raquo;</a></footer> -->
+      </article>
+    </section>
+    <!-- / content body -->
+  </div>
+   
+</div>
+<!-- footer -->
+<div class="wrapper row3">
+  <footer id="footer" class="clear">
+    <section id="shout">
+      <h1> Our posts </h1>
+    </section>
+    <!-- main content -->
+    <section id="services" class="clear">
+      <!-- article 1 -->
+      <article>
+        <h2> Posts list </h2>
+		<div th:unless="${all.isEmpty()}">
+			<div th:each="singlePost: ${all}" th:object="${singlePost}">
+				<h3> Title </h3>
+				<h3 th:text="*{title.toUpperCase()}"> title </h3>
+				<h4> Content </h4>
+				<h4 th:text="*{content}"> content </h4>
+				<h4> Author </h4>
+				<h4 th:text="*{sign}"> email </h4><br/>
+			</div>
+		</div>
+		<div th:if="${all.isEmpty()}">
+			<h3> There is no post yet </h3>
+		</div>
+        <!-- <footer class="more"><a href="#">Read More &raquo;</a></footer> -->
+      </article>
+    </section>
+    
+    <p class="fl_right"></p>
+  </footer>
+</div>
+</body>
+</html>

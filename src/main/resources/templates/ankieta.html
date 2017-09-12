@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Basic 79</title>
+<meta charset="iso-8859-1" />
+<link rel="stylesheet" href="css/layout.css" type="text/css" />
+</head>
+<body>
+<div class="wrapper row1">
+  <header id="header" class="clear">
+    <div id="hgroup">
+      <h2><a href="#">Optymalizacja.pl</a></h2>
+        </div>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">o mnie</a></li>
+        <li><a href="/registerForm">Rejestracja</a></li>
+        <li><a href="/loginForm">Logowanie</a></li>
+        <li><a href="/articles">o optymalizacji</a></li>
+        <li><a href="/contact">Kontakt</a></li>
+        <li><a href="#">ankieta</a></li>
+      </ul>
+    </nav>
+  </header>
+</div>
+<!-- content -->
+<div class="wrapper row2">
+  <div id="container" class="clear">
+    <!-- content body -->
+    <section id="shout">
+      <h1>Ankieta</h1>
+    </section>
+    <!-- main content -->
+    <section id="services" class="clear">
+    	<form>
+			<h1>Ankieta - poświęć chwilę na ankietę i powiedz jakie tematy Ciebie interesują.</h1>
+			<p>Skąd dowiedziałaś się o blogu?: <select name="skąd_wiesz_o_blogu">
+				<option>--wybierz--</option>
+				<option>od znajomych</option>
+				<option>z facebooka</option>
+				<option>z banera reklamowego</option>
+				</select>
+			</p>
+			<p>która ze stref Twojego życia najbardziej wymaga optymalizacji: <select name="co_wymaga_optymalizacji">
+				<option>--wybierz--</option>
+				<option>zarządzanie czasem</option>
+				<option>sprzątanie</option>
+				<option>finanse</option>
+				</select>
+			</p>
+			<p>tu możesz zaproponować inne interesujące Ciebie tamaty:</p>
+			<p><textarea name="uwagi"></textarea></p>
+			<p>Jaki typ aplikacji byłby dla Ciebie najbardziej przydatny?: <select name="Jaka_aplikacja">
+				<option>--wybierz typ aplikacji--</option>
+				<option>do zarządzania finansami osobistymi</option>
+				<option>do zarządzania czasem</option>
+				<option>do robienia zakupów</option>
+				<option>do organizacji porządków</option>
+				</select>
+			</p>
+			<p>Jaka aplikacja byłaby dla Ciebie najbardziej atrakcyjna?<select name="co_wymaga_optymalizacji">
+				<option>--wybierz--</option>
+				<option>aplikacja "lista zakupów" - ułatwiająca zakupy</option>
+				<option>aplikacja "nie mam się w co ubrać" - zestawiająca ubrania w zestawy na każdą okazję</option>
+				<option>aplikacja "czego mi brak w szafie"- pokazująca czy dana rzecz którą mam kupić pasuje do moich ubrań</option>
+				<option>aplikacja "moje finanse" - pomagająca znaleść dziury w domowym budżecie</option>
+				<option>aplikacja "smacznego" - pomagająca zestawić posiłek z posiadanych w lodówce produktów</option>
+				</select>
+			</p>
+			<p>Zaproponuj inne aplikacje, które byłyby dla Ciebie przydatne.</p>
+			<p><textarea name="uwagi"></textarea></p>
+			<p>
+				<button type="reset">wyczyść formularz</button>
+				<button type="submit">wyślij formularz</button>
+			</p>
+		</form>
+	</section>
+	</div>
+<!-- footer -->
+<div class="wrapper row3">
+<footer id="footer" class="clear">
+   <p class="fl_right"></p>
+ </footer>
+ </div>
+ </div>
+</body>
+</html>
+

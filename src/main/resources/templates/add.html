@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Basic 79</title>
+<meta charset="iso-8859-1" />
+<link rel="stylesheet" href="css/layout.css" type="text/css" />
+</head>
+<body>
+<div class="wrapper row1">
+  <header id="header" class="clear">
+    <div id="hgroup">
+      <h1><a href="#">Optymalizacja.pl</a></h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/loginForm">Posts</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/registerForm">Register</a></li>
+        </ul>
+              
+    </nav>
+  </header>
+</div>
+
+	
+<!-- content -->
+<div class="wrapper row2">
+  <div id="container" class="clear">
+    <!-- content body -->
+    <section id="shout">
+      <h1> Our posts </h1>
+      <p>wylogowywanie </p>
+	<form th:action="@{/logout}" method= "post">
+		<input type= "submit" value= "logout"/>
+	</form>
+    </section>
+    <!-- main content -->
+    <section id="services" class="clear">
+      <!-- article 1 -->
+      <article>
+        <h2> Posts list </h2>
+		<div th:unless="${all.isEmpty()}">
+			<div th:each="singlePost: ${all}" th:object="${singlePost}">
+				<h3> Title </h3>
+				<h3 th:text="*{title.toUpperCase()}"> title </h3>
+				<h4> Content </h4>
+				<h4 th:text="*{content}"> content </h4>
+				<h4> Author </h4>
+				<h4 th:text="*{sign}"> email </h4><br/>
+			</div>
+		</div>
+		<div th:if="${all.isEmpty()}">
+			<h3> There is no post yet </h3>
+		</div>
+        <!-- <footer class="more"><a href="#">Read More &raquo;</a></footer> -->
+      </article>
+    </section>
+    <!-- / content body -->
+  </div>
+</div>
+<!-- footer -->
+<div class="wrapper row3">
+  <footer id="footer" class="clear">
+    
+  </footer>
+</div>
+</body>
+</html>
