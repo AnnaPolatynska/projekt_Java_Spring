@@ -1,7 +1,6 @@
 package pl.optymalizacja.controller;
 
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -9,9 +8,11 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import pl.optymalizacja.model.Post;
-import pl.optymalizacja.model.Register;
+import pl.optymalizacja.model.Regist;
 import pl.optymalizacja.repository.PostRepo;
 import pl.optymalizacja.repository.RegisterRepo;
+
+
 
 
 @Controller
@@ -41,37 +42,39 @@ public class BlogController {
 	public String articles(){
 		return "articles";
 	}
-	//strefa wymagająca logowania
 	
-	//formularz rejestracyjny
+//strefa wymagająca logowania
+	
+//formularz rejestracyjny
 	@RequestMapping("/registerForm")
 	public String registerForm(Model model){
-		model.addAttribute("reg", new Register());
+		model.addAttribute("reg", new Regist());
 		return "registerForm";
 	}
-	@PostMapping("/saveRegisterForm")
-	public String saveRegisterForm(@ModelAttribute Register reg, Model model){
-		reg_rep.save(reg);		
-		model.addAttribute("reg",reg);
-		return "saveRegisterForm";
-		}
+	@PostMapping("/saveRegForm")
+	public String saveRegForm(@ModelAttribute Regist reg, Model model){
+		reg_rep.save(reg);
+		model.addAttribute("reg", reg);
+		return "saveRegForm";
+	}
+	
+	
+	
+//formularz logowania
+	@RequestMapping("/loginForm")
+	public String loginForm(Model model){
+		model.addAttribute("reg", new Regist());
+		return "loginForm";
+	}
+	
+	
+	
 	@PostMapping("/success")
 	public String success(@ModelAttribute Model model){
 		//model.addAttribute("reg",reg);
 		return "success";
 		}
-	/*@PostMapping("/add")
-	public String blog(@ModelAttribute Register reg, Model model){
-		model.addAttribute("reg",reg);
-		List<Register> rs = reg_rep.findAllByLoginAndPassword(reg.getLogin(), reg.getPassword());
-		if(rs.isEmpty()){
-			return "errorPage";
-		} else {
-		model.addAttribute("post", new Post());
-		return "add";
-		}
-	}
-	*/
+	
 	@PostMapping("/add")
 	public String add(@ModelAttribute Post post, Model model){
 		post_rep.save(post);
@@ -80,11 +83,6 @@ public class BlogController {
 		return "add";
 	}
 		
-	//formularz logowania
-	@RequestMapping("/loginForm")
-	public String loginForm(Model model){
-		model.addAttribute("reg_rep", new Register());
-		return "loginForm";
-	}
+	
 }
 	

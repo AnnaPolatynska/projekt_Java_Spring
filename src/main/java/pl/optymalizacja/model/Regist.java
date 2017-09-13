@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Register {
+public class Regist {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
@@ -32,8 +32,8 @@ public class Register {
 		this.password = password;
 	}
 	//konstruktory domyślny i wykorzytujący id, login i password
-	public Register(){}
-	public Register(long id, String login, String password) {
+	public Regist(){}
+	public Regist(long id, String login, String password) {
 		super();
 		this.id = id;
 		this.login = login;

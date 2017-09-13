@@ -1,6 +1,5 @@
 create database myblogdatabase;
-use myblogdatabaseposts;
-
+use myblogdatabase;
 
 select* from register;
-#drop table register;
+select* from regist;
