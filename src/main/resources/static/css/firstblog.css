@@ -109,7 +109,11 @@ background : inherit;
 h2 {
 padding : 10px;
 font : bold 130% verdana, tahoma, "Trebuchet MS", sans-serif;
+<<<<<<< HEAD
 color : #339900;
+=======
+color : #F3F7E0;
+>>>>>>> refs/remotes/orgin/Blog
 background : inherit;
 }
 blockquote {
