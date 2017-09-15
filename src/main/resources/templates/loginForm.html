@@ -18,7 +18,6 @@
         <li><a href="/registerForm">Rejestracja</a></li>
         <li><a href="#">Logowanie</a></li>
         <li><a href="/articles">o optymalizacji</a></li>
-        <li><a href="/contact">Kontakt</a></li>
         <li><a href="/ankieta">ankieta</a></li>
       </ul>
     </nav>
@@ -36,7 +35,7 @@
       <!-- article 1 -->
       <article>
               <p>Zaloguj się aby zostawić posta.</p>
-        <form th:action="@{/articles}" method="post" th:object="${reg}">
+        <form th:action="@{/security}" method="post" th:object="${reg}">
 			<p> Insert login </p>
 			<input type="email" th:field="*{login}"/> <br/>
 			<p> Insert password </p>

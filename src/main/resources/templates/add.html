@@ -15,7 +15,6 @@
       <ul>
         <li><a href="/">Home</a></li>
         <li><a href="/loginForm">Posts</a></li>
-        <li><a href="/contact">Contact</a></li>
         <li><a href="/registerForm">Register</a></li>
         </ul>
               
@@ -37,8 +36,8 @@
     </section>
     <!-- main content -->
     <section id="services" class="clear">
-      <!-- article 1 -->
-      <article>
+          <article>
+       <!-- posts form -->
         <h2> Posts list </h2>
 		<div th:unless="${all.isEmpty()}">
 			<div th:each="singlePost: ${all}" th:object="${singlePost}">
@@ -53,7 +52,13 @@
 		<div th:if="${all.isEmpty()}">
 			<h3> There is no post yet </h3>
 		</div>
-        <!-- <footer class="more"><a href="#">Read More &raquo;</a></footer> -->
+        <div>
+        <!-- logout button -->
+        <p>wylogowanie</p>
+        <form th:action="@{/logout}" method= "post">
+        <input type= "submit" value= "logout"/>
+        </form>
+        </div>
       </article>
     </section>
     <!-- / content body -->

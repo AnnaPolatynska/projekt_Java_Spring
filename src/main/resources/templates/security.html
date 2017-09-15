@@ -10,39 +10,40 @@
   <header id="header" class="clear">
     <div id="hgroup">
       <h2><a href="/home">Optymalizacja.pl</a></h2>
-    </div>
+     </div>
     <nav>
       <ul>
-       <li><a href="/">Home</a></li>
+     <li><a href="/">Home</a></li>
         <li><a href="/about">o mnie</a></li>
         <li><a href="/registerForm">Rejestracja</a></li>
         <li><a href="/loginForm">Logowanie</a></li>
-        <li><a href="#">o optymalizacji</a></li>
+        <li><a href="/articles">o optymalizacji</a></li>
         <li><a href="/ankieta">ankieta</a></li>
-      
       </ul>
-     </nav>
+    </nav>
   </header>
 </div>
-<!-- content -->
-<div class="wrapper row2">
-  <div id="container" class="clear">
-    <!-- content body -->
-    <section id="shout">
-      <h1>Witaj w strefie bezpiecznej</h1>
-    </section>
-    <!-- main content -->
-    <section id="services" class="clear">
+<h1>Optymalizacja</h1>
+   		<p><a href="http://cf.makinglemonadeblog.com/wp-content/uploads/2016/01/free-printable-decluttering-checklist-konmari-method-checklist-colors.jpg">lista jak pozbywać się rzeczy</a></p>
+		<div> <!-- logout button -->
+        <p>wylogowanie</p>
+        <form th:action="@{/logout}" method= "post">
+        <input type= "submit" value= "logout"/></form>
+        </div>
+         <section id="services" class="clear">
       <!-- article 1 -->
       <article>
-      <h1>Optymalizacja</h1>
-   <img src ="flower.jpg" />
-		
+		<p> Add post in my blog </p>
+		<form th:action="@{/add}" method="post">
+			<p> Title </p>
+			<input type="text" th:field="${post.title}"/> <br/>
+			<p> Content </p>
+			<textarea th:field="${post.content}"></textarea> <br/>
+			<p> Signature </p>
+			<input type="text" th:field="${post.sign}"/> <br/>
+			<input type="submit" value="send"/>
+		</form>
       </article>
     </section>
-    <!-- / content body -->
-  </div>
-   
-</div>
 </body>
 </html>

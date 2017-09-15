@@ -1,12 +1,14 @@
 package pl.optymalizacja.controller;
 
 import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+
 import pl.optymalizacja.model.Post;
 import pl.optymalizacja.model.Regist;
 import pl.optymalizacja.repository.PostRepo;
@@ -58,8 +60,6 @@ public class BlogController {
 		return "saveRegForm";
 	}
 	
-	
-	
 //formularz logowania
 	@RequestMapping("/loginForm")
 	public String loginForm(Model model){
@@ -67,22 +67,30 @@ public class BlogController {
 		return "loginForm";
 	}
 	
-	
-	
-	@PostMapping("/success")
-	public String success(@ModelAttribute Model model){
-		//model.addAttribute("reg",reg);
-		return "success";
+	@PostMapping("/security")
+	public String security(@ModelAttribute Regist reg, Model model){
+		model.addAttribute("reg", reg);
+		List<Regist> rs = reg_rep.findAllByLoginAndPassword(reg.getLogin(), reg.getPassword());
+		if(rs.isEmpty()){
+			return "errorPage";
+		}else{
+			model.addAttribute("post", new Post());
 		}
-	
-	/*@PostMapping("/add")
+		return "security";
+	}
+	@PostMapping("/add")
 	public String add(@ModelAttribute Post post, Model model){
 		post_rep.save(post);
 		List<Post> all = post_rep.findAll();
 		model.addAttribute("all", all);	
 		return "add";
 	}
-		
-	*/
+	
+	@PostMapping("/success")
+	public String success(@ModelAttribute Model model){
+		return "success";
+		}
+	
+	
 }
 	
