@@ -75,7 +75,7 @@ public class BlogController {
 		return "success";
 		}
 	
-	@PostMapping("/add")
+	/*@PostMapping("/add")
 	public String add(@ModelAttribute Post post, Model model){
 		post_rep.save(post);
 		List<Post> all = post_rep.findAll();
@@ -83,6 +83,6 @@ public class BlogController {
 		return "add";
 	}
 		
-	
+	*/
 }
 	
