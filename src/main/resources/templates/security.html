@@ -23,27 +23,55 @@
     </nav>
   </header>
 </div>
-<h1>Optymalizacja</h1>
-   		<p><a href="http://cf.makinglemonadeblog.com/wp-content/uploads/2016/01/free-printable-decluttering-checklist-konmari-method-checklist-colors.jpg">lista jak pozbywać się rzeczy</a></p>
-		<div> <!-- logout button -->
-        <p>wylogowanie</p>
-        <form th:action="@{/logout}" method= "post">
-        <input type= "submit" value= "logout"/></form>
-        </div>
-         <section id="services" class="clear">
+<!-- content -->
+<div class="wrapper row2">
+  <div id="container" class="clear">
+    <!-- content body -->
+    <section id="shout">
+      <h1>Optymalizacja</h1>
+    </section>
+    <!-- main content -->
+    <section id="services" class="clear">
+      <!-- article 1 -->
       <!-- article 1 -->
       <article>
+      <p>Hej, startujemy.</p>
+      <p>Zaczynamy od pozbycia się zbędnych rzeczy i od uporządkowania przestrzeni.</p>
+      <p> Chodzi o wszystko to co zalega w szafach i szufladach.</p>
+      <p>Polecam książkę "Magia Sprzątania" - Marie Kondo.</p>
+      <p>Poniżej link do metody Konmary, jak pozbywać się zbędnych rzeczy.</p>
+      <p><a href="http://cf.makinglemonadeblog.com/wp-content/uploads/2016/01/free-printable-decluttering-checklist-konmari-method-checklist-colors.jpg">lista jak pozbywać się rzeczy</a></p>
+		<p>Dajcie znać co sądzicie o książce i o samej metodzie.</p>
+		
+         <section id="services" class="clear">
 		<p> Add post in my blog </p>
 		<form th:action="@{/add}" method="post">
-			<p> Title </p>
-			<input type="text" th:field="${post.title}"/> <br/>
-			<p> Content </p>
+			<p> Tytuł </p>
+			<input type="text" th:field="${post.title}"/><br/>
+			<p> Post </p>
 			<textarea th:field="${post.content}"></textarea> <br/>
-			<p> Signature </p>
-			<input type="text" th:field="${post.sign}"/> <br/>
+			<p> Autor </p>
+			<input type="text" th:field="${post.sign}"/><br/>
 			<input type="submit" value="send"/>
-		</form>
+		<!-- logout button -->
+       <div></div>
+       <div> 
+       <form th:action="@{/logout}" method= "post">
+        <input type= "submit" value= "logout"/></form>
+        </div>
+				</form>
+		</section>
       </article>
     </section>
+    <!-- / content body -->
+  </div>
+</div>
+<!-- footer -->
+<div class="wrapper row3">
+  <footer id="footer" class="clear">
+    <p class="fl_right"></p>
+  </footer>
+</div>
 </body>
 </html>
+

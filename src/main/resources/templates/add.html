@@ -13,11 +13,13 @@
     </div>
     <nav>
       <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/loginForm">Posts</a></li>
-        <li><a href="/registerForm">Register</a></li>
-        </ul>
-              
+        <li><a href="/home">Home</a></li>
+        <li><a href="/about">o mnie</a></li>
+        <li><a href="/registerForm">Rejestracja</a></li>
+        <li><a href="/loginForm">Logowanie</a></li>
+        <li><a href="/articles">o optymalizacji</a></li>
+        <li><a href="/ankieta">ankieta</a></li>
+       </ul>
     </nav>
   </header>
 </div>
@@ -28,12 +30,8 @@
   <div id="container" class="clear">
     <!-- content body -->
     <section id="shout">
-      <h1> Our posts </h1>
-      <p>wylogowywanie </p>
-	<form th:action="@{/logout}" method= "post">
-		<input type= "submit" value= "logout"/>
-	</form>
-    </section>
+      <h1> Nasze Posty</h1>
+         </section>
     <!-- main content -->
     <section id="services" class="clear">
           <article>
@@ -41,22 +39,21 @@
         <h2> Posts list </h2>
 		<div th:unless="${all.isEmpty()}">
 			<div th:each="singlePost: ${all}" th:object="${singlePost}">
-				<h3> Title </h3>
+				<h3> Tytuł </h3>
 				<h3 th:text="*{title.toUpperCase()}"> title </h3>
-				<h4> Content </h4>
+				<h4> Post </h4>
 				<h4 th:text="*{content}"> content </h4>
-				<h4> Author </h4>
+				<h4> Autor </h4>
 				<h4 th:text="*{sign}"> email </h4><br/>
 			</div>
 		</div>
 		<div th:if="${all.isEmpty()}">
-			<h3> There is no post yet </h3>
+			<h3> Jeszcze nikt nie zamieścił posta. Bądź pierwszy! </h3>
 		</div>
         <div>
         <!-- logout button -->
-        <p>wylogowanie</p>
         <form th:action="@{/logout}" method= "post">
-        <input type= "submit" value= "logout"/>
+        <input type= "submit" value= "Wyloguj"/>
         </form>
         </div>
       </article>
